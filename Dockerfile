@@ -1,6 +1,6 @@
 FROM python:2
 
-RUN pip install python-dateutil 
+RUN apt update && apt -y install whois && pip install python-dateutil 
 
 ADD ./dns-domain-expiration-checker.py /app/dns-domain-expiration-checker.py
 
